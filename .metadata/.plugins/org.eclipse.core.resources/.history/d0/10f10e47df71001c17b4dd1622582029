@@ -1,0 +1,11 @@
+package configure;
+
+import db_connector.JDBC_Connection;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+   JDBC_Connection.db();
+	}
+
+}

@@ -1,0 +1,9 @@
+package configure;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+	}
+
+}

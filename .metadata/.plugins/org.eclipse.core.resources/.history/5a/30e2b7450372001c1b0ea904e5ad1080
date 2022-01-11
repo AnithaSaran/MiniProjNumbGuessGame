@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Player {
+    public void play(Scanner input, GuessNumberGame game) {
+        int tries = 5;
+        int number = 0;
+
+        for (int i = 0; i < tries; i++) {
+        	System.out.println("The Number is Choosen Between 1 to 50 ")
+        	System.out.println("Guess the Number within 5 Trails")
+            System.out.print("Guess the Number: ");
+            number = Integer.parseInt(input.next());
+            if (number > game.getSecretNumber()) {
+                System.out.println("The Number is lower than " +number);
+            } else if (number < game.getSecretNumber()) {
+                System.out.println("The Number is higher than  " +number);
+            } else {
+                break;
+            }
+        }
+        if (number == game.getSecretNumber()) {
+            System.out.println("!!!Congragulation!!!"
+            		+ "You Guessed The Number");
+        }
+        if (tries == 5 && number != game.getSecretNumber()) {
+        	System.out.println("You Loose the Game!");
+        	System.out.println("You want to Play Again!");
+        }
+    }
+}
